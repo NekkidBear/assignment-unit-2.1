@@ -97,7 +97,7 @@ let petStatus = "";
 if (pets > allowedPets) {
   // More than the max allowed
   petStatus = "Oh no, I have too many pets!";
-} else if(pets == allowedPets){
+} else if(pets === allowedPets){
   // At max number of pets
   petStatus = "I have enough pets";
 } else if (pets < allowedPets) {
@@ -135,7 +135,7 @@ if (pets != friendsPets && Math.max(pets, friendsPets) === pets) {
   petOwner = "Both of us";
 };
 
-if (petOwner == "Both of us"){
+if (petOwner === "Both of us"){
   console.log(`We both have the same number of pets: ${pets}.`);
 } else {
   console.log(`${petOwner} has the most pets: ${mostPets}.`);
