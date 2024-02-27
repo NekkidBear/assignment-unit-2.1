@@ -55,7 +55,7 @@ pets +=2;
 console.log(`One pet had twins. Now I have ${pets}.`)
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
-let allowedPets = Math.floor((Math.random()*10)+1);
+let allowedPets = Math.floor(Math.random()*10);
 console.log(`The lease allows us to have ${allowedPets} pets in our homes.`);
 
 // 12 - Create a variable called `result`. Create a conditional:
