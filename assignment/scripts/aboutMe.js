@@ -14,7 +14,7 @@ console.log(`My full name is ${fullName}`);
 
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
-let luckyNumber = Math.floor(Math.random()*101);
+let luckyNumber = Math.floor(Math.random()*3);
 console.log(`Today's lucky number is ${luckyNumber}`);
 
 // 5 - Create a variable `introduction` and using the variables from above,
@@ -27,7 +27,7 @@ console.log(introduction);
 
 // 6 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 //     Console log the value of `adventurous`
-let adventurous = false;
+let adventurous = true;
 if (adventurous) {
   console.log(`${adventurous} I am adventurous.`);
 } else {
@@ -43,7 +43,7 @@ console.log(`I like ${food}.`);
 
 // 8 - Create a variable called `pets` and set it to the value of the number of pets you have
 //     Console log the value of `pets`
-let pets = 1;
+let pets = Math.floor(Math.random() *3);
 console.log(`Pets: ${pets}`);
 
 
@@ -55,8 +55,8 @@ friendsPets +=2;
 console.log(`One pet had twins. Now he has ${friendsPets}.`)
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
-let allowedPets = friendsPets+1;
-console.log(`Luckily his lease allows him to have ${allowedPets} in his home.`);
+let allowedPets = Math.floor(Math.random()*10);
+console.log(`The lease allows us to have ${allowedPets} pets in our homes.`);
 
 // 12 - Create a variable called `result`. Create a conditional:
 //      if adventurous is true, set `result` to be "Adventures are great!", 
@@ -77,6 +77,13 @@ console.log(result);
 //      set `diceRoll` to be "Roll the dice!"
 //      Console log the value of `diceRoll`
 
+let diceRoll = "Try again later.";
+if (luckyNumber===2 && adventurous) {
+  diceRoll = "Roll the dice!";
+};
+console.log(diceRoll);
+
+
 // 14 - Create a variable called `petStatus`. 
 //      Write a conditional that covers the following:
 //      if the value of `pets` is less than the value of `allowedPets`,
@@ -86,6 +93,23 @@ console.log(result);
 //      if the value of `pets` is greater than the value of `allowedPets`.
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
 
+let petStatus = "";
+if (pets < allowedPets) {
+  // Less than the max allowed
+  petStatus = "I can have more pets!";
+} else if(pets === allowedPets){
+  // At max number of pets
+  petStatus = "I have enough pets.";
+} else if (petStatus > allowedPets) {
+  // more than the allowed number
+  petStatus = "Oh no, I have too many pets!";
+} else {
+  //if all other cases fail; shouldn't be triggered unless an error happens
+  petStatus = "I need a pet";
+};
+
+console.log(petStatus);
+
 
 // STRETCH GOALS:
 
@@ -94,6 +118,28 @@ console.log(result);
 //      assigns the highest value to `mostPets`. There's several possibilities --
 //      be sure to think through all the scenarios. 
 //      console.log `mostPets` after the conditional has run.
+
+let mostPets = 0;
+let petOwner = "";
+if (pets !== friendsPets && Math.max(pets, friendsPets) === pets) {
+  // I have the most
+  mostPets = pets;
+  petOwner = firstName;
+} else if (pets !== friendsPets && Math.max(pets, friendsPets) === friendsPets) {
+  // My friend has the most
+  mostPets = friendsPets;
+  petOwner = "My friend";
+} else if (pets=friendsPets) {
+  //we have the same number
+  mostPets = pets;
+  petOwner = "Both of us";
+};
+
+if (petOwner === "Both of us"){
+  console.log(`We both have the same number of pets: ${pets}.`);
+} else {
+  console.log(`${petOwner} has the most pets: ${pets}.`);
+};
 
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
