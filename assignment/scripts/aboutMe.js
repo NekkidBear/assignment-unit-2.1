@@ -14,7 +14,7 @@ console.log(`My full name is ${fullName}`);
 
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
-let luckyNumber = Math.floor(Math.random()*3);
+let luckyNumber = Math.floor(Math.random()*5);
 console.log(`Today's lucky number is ${luckyNumber}`);
 
 // 5 - Create a variable `introduction` and using the variables from above,
@@ -51,8 +51,8 @@ console.log(`Pets: ${pets}`);
 let friendsPets = Math.floor((Math.random()*5)+1);
 console.log(`Currently my friend has ${friendsPets} pets.`);
 // 10 - Add two pets to your `pets` variable
-friendsPets +=2;
-console.log(`One pet had twins. Now he has ${friendsPets}.`)
+pets +=2;
+console.log(`One pet had twins. Now I have ${pets}.`)
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 let allowedPets = Math.floor(Math.random()*10);
@@ -94,15 +94,15 @@ console.log(diceRoll);
 //      set `petStatus` to the value of "Oh no, I have too many pets!"
 
 let petStatus = "";
-if (pets < allowedPets) {
-  // Less than the max allowed
-  petStatus = "I can have more pets!";
-} else if(pets === allowedPets){
-  // At max number of pets
-  petStatus = "I have enough pets.";
-} else if (petStatus > allowedPets) {
-  // more than the allowed number
+if (pets > allowedPets) {
+  // More than the max allowed
   petStatus = "Oh no, I have too many pets!";
+} else if(pets == allowedPets){
+  // At max number of pets
+  petStatus = "I have enough pets";
+} else if (petStatus < allowedPets) {
+  // less than the allowed number
+  petStatus = "I can have more pets";
 } else {
   //if all other cases fail; shouldn't be triggered unless an error happens
   petStatus = "I need a pet";
@@ -121,11 +121,11 @@ console.log(petStatus);
 
 let mostPets = 0;
 let petOwner = "";
-if (pets !== friendsPets && Math.max(pets, friendsPets) === pets) {
+if (pets != friendsPets && Math.max(pets, friendsPets) === pets) {
   // I have the most
   mostPets = pets;
   petOwner = firstName;
-} else if (pets !== friendsPets && Math.max(pets, friendsPets) === friendsPets) {
+} else if (pets != friendsPets && Math.max(pets, friendsPets) === friendsPets) {
   // My friend has the most
   mostPets = friendsPets;
   petOwner = "My friend";
@@ -135,10 +135,10 @@ if (pets !== friendsPets && Math.max(pets, friendsPets) === pets) {
   petOwner = "Both of us";
 };
 
-if (petOwner === "Both of us"){
+if (petOwner == "Both of us"){
   console.log(`We both have the same number of pets: ${pets}.`);
 } else {
-  console.log(`${petOwner} has the most pets: ${pets}.`);
+  console.log(`${petOwner} has the most pets: ${mostPets}.`);
 };
 
 // 16 - Make a variable called `luckyResult`
@@ -149,6 +149,24 @@ if (petOwner === "Both of us"){
 //      Otherwise, "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
+
+let luckyResult = ""
+
+switch (luckyNumber){
+  case 1:
+    luckyResult = "First is the worst";
+    break;
+  case 2: 
+    luckyResult = "Second is the best";
+    break;
+  case 3: 
+    luckyResult = "Third is the one with the polka dot dress";
+    break;
+  default: 
+    luckyResult = "Luck is what happens when preparation meets opportunity"
+};
+
+console.log(luckyResult);
 
 // 17 -- Rewrite question 12 with a `ternary` operator. You'll need to do research!
 
