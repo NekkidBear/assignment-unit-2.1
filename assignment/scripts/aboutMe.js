@@ -1,7 +1,7 @@
 // REQUIRED FEATURES:
 // 1 - Create a variable called `firstName` and assign it the value of your first name
 let firstName = 'Jason';
-console.log( `My Name is ${firstname}`);
+console.log( `My Name is ${firstName}`);
 // 2 - Create a second variable called `lastName` and assign it the value of your last name
 let lastName = "King-Lowe";
 console.log(`My surname is ${lastName}`);
@@ -14,7 +14,7 @@ console.log(`My full name is ${fullName}`);
 
 // 4 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
 //     Console log the value of `luckyNumber`
-let luckyNumber = math.floor(math.random()*101);
+let luckyNumber = Math.floor(Math.random()*101);
 console.log(`Today's lucky number is ${luckyNumber}`);
 
 // 5 - Create a variable `introduction` and using the variables from above,
@@ -27,30 +27,49 @@ console.log(introduction);
 
 // 6 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 //     Console log the value of `adventurous`
-let adventurous = true;
+let adventurous = false;
 if (adventurous) {
   console.log(`${adventurous} I am adventurous.`);
 } else {
-  console.log(`${adventurous}I am not adventurous.`);
+  console.log(`${adventurous} I am not adventurous.`);
 };
 
 
 // 7 - Create a variable named `food`, and set its value to a string of your favorite food
 //     Console log the value of `food`
 
+let food = 'junk food';
+console.log(`I like ${food}.`);
+
 // 8 - Create a variable called `pets` and set it to the value of the number of pets you have
 //     Console log the value of `pets`
+let pets = 1;
+console.log(`Pets: ${pets}`);
+
 
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-
+let friendsPets = Math.floor((Math.random()*5)+1);
+console.log(`Currently my friend has ${friendsPets} pets.`);
 // 10 - Add two pets to your `pets` variable
+friendsPets +=2;
+console.log(`One pet had twins. Now he has ${friendsPets}.`)
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
+let allowedPets = friendsPets+1;
+console.log(`Luckily his lease allows him to have ${allowedPets} in his home.`);
 
 // 12 - Create a variable called `result`. Create a conditional:
 //      if adventurous is true, set `result` to be "Adventures are great!", 
 //      if it's not true,  set `result` to be "How about we stay home?"
 //      Console log the value of `result`
+let result = "";
+if (adventurous) {
+  result = "Adventures are great!";
+} else {
+  result = "How about we stay home?";
+};
+console.log(result);
+
 
 // 13 - Create a variable called `diceRoll` and set it to the value of "Try again later.".
 //      Create a compound conditional: 
