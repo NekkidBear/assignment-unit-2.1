@@ -27,7 +27,7 @@ console.log(introduction);
 
 // 6 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 //     Console log the value of `adventurous`
-let adventurous = true;
+let adventurous = Math.random() < 0.5;
 if (adventurous) {
   console.log(`${adventurous} I am adventurous.`);
 } else {
@@ -44,15 +44,15 @@ console.log(`I like ${food}.`);
 // 8 - Create a variable called `pets` and set it to the value of the number of pets you have
 //     Console log the value of `pets`
 let pets = Math.floor(Math.random() *3);
-console.log(`Pets: ${pets}`);
+console.log(`Current Pets: ${pets}`);
 
 
 // 9 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = Math.floor((Math.random()*5)+1);
+let friendsPets = Math.floor((Math.random()*5));
 console.log(`Currently my friend has ${friendsPets} pets.`);
 // 10 - Add two pets to your `pets` variable
 pets +=2;
-console.log(`One pet had twins. Now I have ${pets}.`)
+console.log(`I got some pets. Now I have ${pets}.`)
 
 // 11 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 let allowedPets = Math.floor(Math.random()*10);
@@ -100,7 +100,7 @@ if (pets > allowedPets) {
 } else if(pets == allowedPets){
   // At max number of pets
   petStatus = "I have enough pets";
-} else if (petStatus < allowedPets) {
+} else if (pets < allowedPets) {
   // less than the allowed number
   petStatus = "I can have more pets";
 } else {
